@@ -41,6 +41,7 @@ ros-jazzy-robot-localization = "*"
 
 [tasks]
 build = "colcon build --symlink-install"
+clean = "rm -rf build install log"
 dashboard = "npm --prefix src/dashboard install && npm --prefix src/dashboard run dev"
 
 [target.osx-arm64.tasks]
