@@ -1,0 +1,47 @@
+[workspace]
+requires-pixi = ">=0.72.1"
+platforms = ["linux-64", "osx-arm64"]
+channels = [
+    "https://prefix.dev/robostack-jazzy",
+    "https://prefix.dev/conda-forge",
+]
+
+[activation]
+scripts = ["install/setup.sh"]
+env = { ROS_DOMAIN_ID = "0" }
+
+[dependencies]
+make = "*"
+ninja = "*"
+cmake = "*"
+python = "*"
+pytest = "7.*"
+rosdep = "*"
+compilers = "*"
+pkg-config = "*"
+nodejs = ">=22,<23"
+ros-jazzy-desktop-full = "*"
+
+ros-jazzy-ros2-control = "*"
+ros-jazzy-ros2-controllers = "*"
+
+ros-jazzy-gz-ros2-control = "*"
+
+ros-jazzy-joint-state-publisher = "*"
+ros-jazzy-joint-state-publisher-gui = "*"
+
+ros-jazzy-navigation2 = "*"
+ros-jazzy-nav2-bringup = "*"
+colcon-common-extensions = "*"
+
+ros-jazzy-xacro = "*"
+ros-jazzy-twist-mux = "*"
+ros-jazzy-foxglove-bridge = "*"
+ros-jazzy-robot-localization = "*"
+
+[tasks]
+build = "colcon build --symlink-install"
+dashboard = "npm --prefix src/dashboard install && npm --prefix src/dashboard run dev"
+
+[target.osx-arm64.tasks]
+build = "colcon build --symlink-install --packages-skip chassis_controls"
