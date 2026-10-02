@@ -16,6 +16,7 @@ compile_commands.json
 **/.vs/
 **.pyc
 **.pyi
+.pixi/
 
 supervisord.log
 supervisord.pid
