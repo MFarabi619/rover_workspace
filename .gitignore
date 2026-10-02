@@ -1,22 +1,24 @@
-build/
 bin/
-devel/
-src/CMakeLists.txt
-src/chassis_controls/bin/
-install/
 log/
+build/
+devel/
 .cache/
 .ccache/
+install/
+src/CMakeLists.txt
+src/chassis_controls/bin/
+
 compile_commands.json
+
+*.ikcache
 .ipynb_checkpoints/
 .virtual_documents/
-*.ikcache
 
-**/.vscode/
+.pixi/
 **/.vs/
 **.pyc
 **.pyi
-.pixi/
+**/.vscode/
 
 supervisord.log
 supervisord.pid
