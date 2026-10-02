@@ -42,6 +42,9 @@ ros-jazzy-robot-localization = "*"
 [tasks]
 build = "colcon build --symlink-install"
 clean = "rm -rf build install log"
+sim = { cmd = "ros2 launch autonomous_navigation drive_sim.launch.py", depends-on = [
+    "build",
+] }
 dashboard = "npm --prefix src/dashboard install && npm --prefix src/dashboard run dev"
 
 [target.osx-arm64.tasks]
