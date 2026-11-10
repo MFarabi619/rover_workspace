@@ -1,8 +1,6 @@
 <?xml version="1.0"?>
 <sdf version='1.6'>
   <world name='default'>
-    <!-- gz sim loads no default systems once a world declares any plugin, so
-         list the core ones alongside the sensor systems the rover needs. -->
     <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics" />
     <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands" />
     <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster" />

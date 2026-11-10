@@ -171,9 +171,6 @@ def generate_launch_description():
                 cmd=["gz", "sim", "-s", "-r", gazebo_world_file],
                 output="screen",
             ),
-            # On macOS the GUI logs "Unable to load Ogre Plugin[...]" for the
-            # optional GL3Plus render system and then renders with Metal anyway;
-            # gz-rendering >= 8.3 silences it, conda-forge ships 8.2 for arm64.
             ExecuteProcess(
                 cmd=["gz", "sim", "-g"],
                 output="screen",

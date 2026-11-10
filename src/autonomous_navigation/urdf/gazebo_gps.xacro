@@ -48,8 +48,6 @@ https://github.com/ros-navigation/navigation2_tutorials/blob/8d80918b0e926b02758
             <pose>0 0 0 0 0 0</pose>
             <navsat>
                 <position_sensing>
-                    <!-- gz-sensors adds horizontal noise to latitude/longitude in
-                         degrees, not metres, so 1e-7 deg is roughly 1 cm. -->
                     <horizontal>
                         <noise type="gaussian">
                             <mean>0.0</mean>
